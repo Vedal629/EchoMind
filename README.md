@@ -55,6 +55,14 @@ KakaoPersona/
 
 ---
 
+## ⚙️ 실행 방법
+# 기본 실행 (샘플 데이터)
+python main.py -f data/sample_chat.txt -o out_report
+
+# 실제 내보낸 카톡 파일 분석
+python main.py -f "C:/Users/내이름/Desktop/KakaoTalk_Chat.txt" -o out_results
+
+---
 
 ## 📊 결과물
 - `out_report/summary.md` : 사람이 읽기 쉬운 요약 리포트  
