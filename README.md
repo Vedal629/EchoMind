@@ -13,3 +13,60 @@
 - 결과를 **Markdown, JSON, CSV** 리포트로 저장
 
 ---
+
+## 📂 파일 구조
+
+```
+KakaoPersona/
+├─ .gitignore
+├─ .env.example
+├─ requirements.txt
+├─ README.md
+├─ main.py
+│
+├─ src/
+│  ├─ __init__.py
+│  ├─ kakao_parser.py
+│  ├─ api_clients.py
+│  ├─ analyzer.py
+│  └─ report.py
+│
+├─ data/
+│  └─ sample_chat.txt
+│
+└─ out_report/
+   ├─ summary.md
+   ├─ report.json
+   └─ utterances.csv
+```
+
+---
+
+## 🔑 환경 변수 설정
+
+
+1. `.env` 안에 실제 API 키를 입력합니다. (키는 팀별 개인 계정에서 발급)
+   ```
+   HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxx
+   PERSPECTIVE_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXX
+   ```
+
+> ⚠️ `.env` 파일은 `.gitignore`에 등록되어 있어 깃허브에 업로드되지 않습니다.  
+
+---
+
+
+## 📊 결과물
+- `out_report/summary.md` : 사람이 읽기 쉬운 요약 리포트  
+- `out_report/report.json` : 세부 분석 JSON  
+- `out_report/utterances.csv` : 문장 단위 감성/독성 결과
+
+---
+
+## ⚠️ 주의사항
+- 본 프로젝트는 **탐색적 성향 분석 도구**입니다.  
+- 결과는 임상적 성격 검사나 심리 진단을 대체하지 않습니다.  
+- 대화 데이터는 **본인 동의 하에** 사용해야 하며, 개인정보 보호를 위해 `.env`, 실제 카톡 로그 파일은 절대 깃허브에 업로드하지 마세요.
+
+---
+
